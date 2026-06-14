@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adeline Cruz — HR & Operations Professional</title>
+  <meta name="description" content="Certified Human Resource Associate and BS Psychology Cum Laude graduate. Specializing in recruitment coordination, HR administration, and operations support." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #7C6A52;
+      --green-light: #F5F0E8;
+      --green-mid: #E8DDD0;
+      --terra: #B5573E;
+      --terra-light: #FEF0EC;
+      --terra-mid: #F0C4B4;
+      --bg: #FAF7F2;
+      --bg-alt: #F2EDE5;
+      --text: #1A1A18;
+      --muted: #6B6B68;
+      --border: #E4DDD3;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(250, 250, 248, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--green); }
+
+    .nav-cta {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--white);
+      background: var(--green);
+      padding: 7px 18px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* HAMBURGER */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--text);
+      transition: transform 0.25s, opacity 0.25s;
+    }
+
+    /* SECTIONS */
+    section { padding: 5rem 2rem; }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-size: 0.6875rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 540px;
+      line-height: 1.7;
+    }
+
+    /* HERO */
+    #hero {
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      background: var(--green-light);
+      border: 1px solid var(--green-mid);
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-tag::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.75rem, 6vw, 4.5rem);
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--green);
+    }
+
+    .hero-tagline {
+      font-size: 1.0625rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      max-width: 480px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--white);
+      background: var(--green);
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--green);
+      background: transparent;
+      border: 1.5px solid var(--green);
+      padding: 11px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover { background: var(--green-light); }
+
+    .hero-avatar {
+      width: 200px;
+      height: 240px;
+      border-radius: 12px;
+      background: var(--green-light);
+      border: 2px solid var(--green-mid);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .hero-avatar-initials {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 500;
+      color: var(--green);
+      line-height: 1;
+    }
+
+    .hero-avatar-note {
+      font-size: 0.6875rem;
+      color: var(--muted);
+      margin-top: 10px;
+      letter-spacing: 0.05em;
+    }
+
+    /* STATS */
+    #stats {
+      padding: 2.5rem 2rem;
+      background: var(--green);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-right: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .stat-item:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.06em;
+      margin-top: 6px;
+      display: block;
+    }
+
+    /* ABOUT */
+    #about { background: var(--bg-alt); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-body {
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .about-body p { margin-bottom: 1.125rem; }
+    .about-body p:last-child { margin-bottom: 0; }
+
+    .about-sidebar {}
+
+    .quick-facts {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+    }
+
+    .quick-facts-head {
+      padding: 12px 16px;
+      background: var(--green-light);
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 500;
+      border-bottom: 1px solid var(--green-mid);
+    }
+
+    .fact-row {
+      display: flex;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      gap: 12px;
+      font-size: 0.875rem;
+    }
+
+    .fact-row:last-child { border-bottom: none; }
+
+    .fact-key {
+      color: var(--muted);
+      width: 90px;
+      flex-shrink: 0;
+    }
+
+    .fact-val {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .mission-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--green);
+      border-radius: 0 10px 10px 0;
+      padding: 1.125rem 1.25rem;
+    }
+
+    .mission-label {
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .mission-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.0625rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* EXPERIENCE */
+    #experience { background: var(--bg); }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      bottom: 10px;
+      width: 1px;
+      background: var(--green-mid);
+    }
+
+    .exp-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .exp-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .exp-dot {
+      position: absolute;
+      left: -2rem;
+      top: 6px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--green);
+      border: 2px solid var(--bg);
+      transform: translateX(-5px);
+    }
+
+    .exp-company {
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+
+    .exp-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.375rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .exp-date {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      margin-bottom: 0.875rem;
+    }
+
+    .exp-desc {
+      font-size: 0.9375rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 0.875rem;
+      max-width: 680px;
+    }
+
+    .metric-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .metric-tag {
+      font-size: 0.75rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--terra-light);
+      color: var(--terra);
+      border: 1px solid var(--terra-mid);
+      font-weight: 500;
+    }
+
+    /* SKILLS */
+    #skills { background: var(--bg-alt); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .skill-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .skill-card-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--green-light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .skill-card-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--green);
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .skill-card-head {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .skill-list {
+      list-style: none;
+    }
+
+    .skill-list li {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 4px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-list li:last-child { border-bottom: none; }
+
+    .skill-list li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    /* EDUCATION & CERTS */
+    #education { background: var(--bg); }
+
+    .edu-certs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .edu-card {
+      background: var(--green-light);
+      border: 1px solid var(--green-mid);
+      border-radius: 10px;
+      padding: 1.75rem;
+    }
+
+    .edu-school {
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .edu-degree {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .edu-honors {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .edu-courses {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      line-height: 1.65;
+      border-top: 1px solid var(--green-mid);
+      padding-top: 0.875rem;
+    }
+
+    .certs-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+    }
+
+    .cert-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.125rem 1.25rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .cert-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--terra);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .cert-name {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .cert-org {
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    /* TESTIMONIALS */
+    #testimonials { background: var(--bg-alt); }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .testi-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .testi-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.0625rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .testi-quote::before {
+      content: '\201C';
+      font-size: 2rem;
+      color: var(--green);
+      line-height: 0;
+      vertical-align: -0.4em;
+      margin-right: 2px;
+    }
+
+    .testi-author {
+      border-top: 1px solid var(--border);
+      padding-top: 0.875rem;
+    }
+
+    .testi-name {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .testi-role {
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    .testi-placeholder-note {
+      font-size: 0.75rem;
+      color: var(--terra);
+      background: var(--terra-light);
+      border: 1px solid var(--terra-mid);
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    /* CONTACT */
+    #contact {
+      background: var(--green);
+      padding: 5rem 2rem;
+    }
+
+    #contact .eyebrow { color: rgba(255,255,255,0.55); }
+
+    #contact .section-title { color: var(--white); }
+
+    #contact .section-subtitle { color: rgba(255,255,255,0.65); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+      align-items: start;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: background 0.2s;
+    }
+
+    .contact-link:hover { background: rgba(255,255,255,0.08); }
+
+    .contact-link svg {
+      width: 18px;
+      height: 18px;
+      stroke: rgba(255,255,255,0.6);
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .contact-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-availability {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .avail-label {
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.75rem;
+    }
+
+    .avail-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .avail-tag {
+      font-size: 0.8125rem;
+      padding: 5px 14px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.85);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--green);
+      background: var(--white);
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .contact-btn:hover { opacity: 0.9; }
+
+    /* FOOTER */
+    footer {
+      background: #2C2420;
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      section { padding: 4rem 1.25rem; }
+
+      nav { padding: 0 1.25rem; }
+
+      .nav-links, .nav-cta { display: none; }
+
+      .nav-toggle { display: flex; }
+
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 60px; left: 0; right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 1.25rem 1.5rem;
+        z-index: 99;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .mobile-menu.open { display: flex; }
+
+      .mobile-menu a {
+        font-size: 0.9375rem;
+        color: var(--text);
+        text-decoration: none;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .mobile-menu a:last-child { border-bottom: none; }
+
+      #hero { padding-top: 7rem; min-height: auto; }
+
+      .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+
+      .hero-avatar { width: 120px; height: 140px; order: -1; }
+
+      .hero-h1 { font-size: 2.5rem; }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
+
+      .stat-item:nth-child(2n) { border-right: none; }
+
+      .stat-item:last-child, .stat-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+      .skills-grid { grid-template-columns: 1fr; }
+
+      .edu-certs-grid { grid-template-columns: 1fr; }
+
+      .testimonials-grid { grid-template-columns: 1fr; }
+
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+      .exp-header { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-h1 { font-size: 2rem; }
+      .stat-num { font-size: 2.25rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav aria-label="Main navigation">
+    <a href="#hero" class="nav-logo">Adeline Cruz</a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:m.beaadelinecruz@gmail.com" class="nav-cta">Get in Touch</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile menu">
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#experience" onclick="closeMenu()">Experience</a>
+    <a href="#skills" onclick="closeMenu()">Skills</a>
+    <a href="#education" onclick="closeMenu()">Education</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-tag">Open to HR &amp; Operations Roles</div>
+          <h1 class="hero-h1">Where precision<br>meets <em>people skills.</em></h1>
+          <p class="hero-tagline">
+            Certified Human Resource Associate &amp; BS Psychology Cum Laude graduate.
+            Experienced in recruitment coordination, HR administration, and cross-sector operations support.
+          </p>
+          <div class="hero-btns">
+            <a href="#experience" class="btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+              View My Work
+            </a>
+            <a href="mailto:m.beaadelinecruz@gmail.com" class="btn-outline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Say Hello
+            </a>
+          </div>
+        </div>
+        <div class="hero-avatar" aria-label="Adeline Cruz profile photo">
+          <img src="photo.png" alt="Adeline Cruz" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:12px;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats" aria-label="Key achievements">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Documentation Accuracy</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">30%</span>
+          <span class="stat-label">Faster Record Retrieval</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">95%</span>
+          <span class="stat-label">Applicant Response Rate</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">200+</span>
+          <span class="stat-label">Attendees Per Event</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container reveal">
+      <div class="eyebrow">About Me</div>
+      <div class="about-grid">
+        <div>
+          <h2 class="section-title">Precision &amp; people, in equal measure.</h2>
+          <div class="about-body">
+            <p>
+              I'm Ade — a Certified Human Resource Associate and psychology graduate who believes administrative work is most powerful when it's grounded in how people actually operate.
+            </p>
+            <p>
+              I've spent the past year building experience across three very different environments: end-to-end recruitment coordination at a corporate company, behavioral therapy support in a clinical center, and inclusive classroom work in a public school. Every setting demanded the same things from me — accuracy, reliability, and genuine presence — and I delivered in all three.
+            </p>
+            <p>
+              My background in organizational and industrial psychology means I don't just manage processes. I understand the people inside them. That perspective shapes everything from how I handle applicant communications to how I build documentation systems.
+            </p>
+            <p>
+              I'm looking for a team that values both operational precision and human-centered thinking — a place where I can grow my HR foundation and make a measurable difference.
+            </p>
+          </div>
+        </div>
+        <div class="about-sidebar">
+          <div class="quick-facts">
+            <div class="quick-facts-head">At a Glance</div>
+            <div class="fact-row"><span class="fact-key">Based in</span><span class="fact-val">Taguig City, PH</span></div>
+            <div class="fact-row"><span class="fact-key">Degree</span><span class="fact-val">BS Psychology, Cum Laude</span></div>
+            <div class="fact-row"><span class="fact-key">Certified</span><span class="fact-val">HREAP Batch 71, 2026</span></div>
+            <div class="fact-row"><span class="fact-key">Dean's List</span><span class="fact-val">8 consecutive sems</span></div>
+            <div class="fact-row"><span class="fact-key">Available</span><span class="fact-val">Full-time · Remote · Hybrid</span></div>
+          </div>
+          <div class="mission-card">
+            <div class="mission-label">Personal Mission</div>
+            <p class="mission-text">To bring precision, empathy, and genuine human understanding to every organization I support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container reveal">
+      <div class="exp-header">
+        <div>
+          <div class="eyebrow">Work Experience</div>
+          <h2 class="section-title">Where I've made<br>an impact.</h2>
+        </div>
+      </div>
+
+      <div class="timeline">
+
+        <!-- SUYEN -->
+        <div class="exp-item">
+          <div class="exp-dot" aria-hidden="true"></div>
+          <div class="exp-company">Suyen Corporation</div>
+          <h3 class="exp-title">HR &amp; Administrative Assistant Intern</h3>
+          <div class="exp-date">November 2025</div>
+          <p class="exp-desc">
+            Managed end-to-end recruitment pipelines — from applicant screening and examination administration through interview scheduling and documentation — with zero scheduling conflicts across all open roles. Systematized 50+ applicant records into a structured filing system, cutting retrieval time by 30% during HR audits. Maintained multi-channel applicant communication via email, SMS, phone, JobStreet, and LinkedIn, sustaining a 95% response rate while delivering a consistently professional candidate experience.
+          </p>
+          <div class="metric-tags">
+            <span class="metric-tag">100% documentation accuracy</span>
+            <span class="metric-tag">30% faster retrieval</span>
+            <span class="metric-tag">95% response rate</span>
+            <span class="metric-tag">Zero scheduling conflicts</span>
+          </div>
+        </div>
+
+        <!-- SPECIAL ED -->
+        <div class="exp-item">
+          <div class="exp-dot" aria-hidden="true"></div>
+          <div class="exp-company">Enlisted Men's Signal Village Elementary School</div>
+          <h3 class="exp-title">Special Education Teacher Intern</h3>
+          <div class="exp-date">September – October 2025</div>
+          <p class="exp-desc">
+            Delivered structured classroom sessions and therapeutic activities for 25+ students with diverse learning needs, with measurable focus on communication skills and behavioral regulation. Maintained detailed, data-driven progress documentation and behavioral assessments that fed directly into program evaluation and individualized student planning. Collaborated daily with four educators and support staff to align therapeutic objectives and maximize outcomes across the full learning environment.
+          </p>
+          <div class="metric-tags">
+            <span class="metric-tag">25+ individual student plans</span>
+            <span class="metric-tag">Cross-functional collaboration</span>
+            <span class="metric-tag">Data-driven tracking</span>
+          </div>
+        </div>
+
+        <!-- SAINT LUKE -->
+        <div class="exp-item">
+          <div class="exp-dot" aria-hidden="true"></div>
+          <div class="exp-company">Saint Luke Neurodevelopmental Therapy Center</div>
+          <h3 class="exp-title">Behavioral Therapist Intern</h3>
+          <div class="exp-date">August – September 2025</div>
+          <p class="exp-desc">
+            Applied evidence-based behavioral intervention strategies in structured one-on-one and small-group sessions, supporting each client's individual therapy goals through reinforcement-based activities. Maintained clinical records with zero documentation errors, ensuring accurate data for ongoing treatment planning and progress monitoring. Communicated proactively with client families and interdisciplinary care teams to deliver coordinated, compassionate therapeutic support.
+          </p>
+          <div class="metric-tags">
+            <span class="metric-tag">Zero clinical documentation errors</span>
+            <span class="metric-tag">Interdisciplinary team coordination</span>
+          </div>
+        </div>
+
+        <!-- EUREKA -->
+        <div class="exp-item">
+          <div class="exp-dot" aria-hidden="true"></div>
+          <div class="exp-company">Eureka Society · Taguig City University</div>
+          <h3 class="exp-title">Head of Events Committee</h3>
+          <div class="exp-date">2024 – 2025</div>
+          <p class="exp-desc">
+            Directed comprehensive planning and execution of five high-impact academic and social events, each attended by 200+ people, with zero scheduling conflicts throughout the year. Led a cross-functional committee of 12 student leaders — delegating responsibilities, managing timelines, and coordinating logistics with faculty and external vendors. Achieved 95%+ positive attendee feedback consistently. Built hands-on competency in event budgeting, stakeholder communication, and team accountability under real-world constraints.
+          </p>
+          <div class="metric-tags">
+            <span class="metric-tag">200+ attendees per event</span>
+            <span class="metric-tag">12-person committee lead</span>
+            <span class="metric-tag">95%+ positive feedback</span>
+            <span class="metric-tag">Zero conflicts</span>
+          </div>
+        </div>
+
+        <!-- PSYCH SOC -->
+        <div class="exp-item">
+          <div class="exp-dot" aria-hidden="true"></div>
+          <div class="exp-company">Psychology Society · Taguig City University</div>
+          <h3 class="exp-title">Event Committee Member</h3>
+          <div class="exp-date">2024 – 2026</div>
+          <p class="exp-desc">
+            Designed and implemented programming that increased organizational membership by 40%, coordinating 8+ initiatives focused on peer learning and community development. Collaborated with officers and peers across multiple programs to strengthen participation and professional development within the psychology department.
+          </p>
+          <div class="metric-tags">
+            <span class="metric-tag">40% membership growth</span>
+            <span class="metric-tag">8+ programs coordinated</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container reveal">
+      <div class="eyebrow">Core Competencies</div>
+      <h2 class="section-title">What I bring to every role.</h2>
+      <p class="section-subtitle">A blend of operational discipline, people-centered psychology training, and a full modern tech stack.</p>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div class="skill-card-head">Operational</div>
+          <ul class="skill-list">
+            <li>Recruitment Coordination</li>
+            <li>End-to-End Applicant Pipeline</li>
+            <li>HR Data Management</li>
+            <li>Documentation &amp; Filing Systems</li>
+            <li>Calendar &amp; Schedule Management</li>
+            <li>Multi-channel Communication</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="skill-card-head">People &amp; Behavioral</div>
+          <ul class="skill-list">
+            <li>Behavioral Observation &amp; Assessment</li>
+            <li>Stakeholder Engagement</li>
+            <li>Cross-functional Collaboration</li>
+            <li>Professional Communication</li>
+            <li>Organizational Psychology</li>
+            <li>Event &amp; Program Coordination</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div class="skill-card-head">Technical</div>
+          <ul class="skill-list">
+            <li>Google Workspace (full suite)</li>
+            <li>Microsoft 365 (full suite)</li>
+            <li>ATS: JobStreet &amp; LinkedIn</li>
+            <li>Canva &amp; Canva AI</li>
+            <li>AI Tools: ChatGPT, Claude, Gemini</li>
+            <li>Zoom · Google Meet</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTS -->
+  <section id="education">
+    <div class="container reveal">
+      <div class="eyebrow">Education &amp; Certifications</div>
+      <h2 class="section-title">The foundation behind<br>the work.</h2>
+
+      <div class="edu-certs-grid">
+
+        <div class="edu-card">
+          <div class="edu-school">Taguig City University</div>
+          <div class="edu-degree">BS Psychology</div>
+          <div class="edu-honors">Class of 2026 &nbsp;·&nbsp; Cum Laude &nbsp;·&nbsp; Dean's Lister, 8 semesters</div>
+          <div class="edu-courses">
+            <strong style="display:block; margin-bottom:4px; color:#2D5A40; font-size:0.75rem; letter-spacing:0.06em; text-transform:uppercase;">Relevant Coursework</strong>
+            Organizational &amp; Industrial Psychology &nbsp;·&nbsp; Research Methods &nbsp;·&nbsp; Business Communication &nbsp;·&nbsp; Human Development
+          </div>
+        </div>
+
+        <div class="certs-stack">
+          <div class="cert-card">
+            <div class="cert-dot"></div>
+            <div>
+              <div class="cert-name">Certified Human Resource Associate</div>
+              <div class="cert-org">Human Resource Educators Association of the Philippines (HREAP) · Batch 71 · May 2026</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-dot" style="background: var(--green);"></div>
+            <div>
+              <div class="cert-name">Research Poster Presentation Certificate</div>
+              <div class="cert-org">11th Annual Research Congress · Taguig City University · April 2026</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-dot" style="background: var(--green);"></div>
+            <div>
+              <div class="cert-name">39th PAPJA Annual Convention Participant</div>
+              <div class="cert-org">Psychological Association of the Philippines · April 2026</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container reveal">
+      <div class="eyebrow">Testimonials</div>
+      <h2 class="section-title">What people say<br>about working with me.</h2>
+
+      <div class="testimonials-grid">
+
+        <div class="testi-card">
+          <p class="testi-quote">
+            Ade demonstrated exceptional reliability throughout her internship — her documentation was always accurate, her communication with candidates was professional, and she needed minimal supervision to manage a high volume of applicants.
+          </p>
+          <div class="testi-author">
+            <div class="testi-name">HR Supervisor</div>
+            <div class="testi-role">Suyen Corporation</div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <p class="testi-quote">
+            Her ability to collaborate with our full care team while maintaining precise clinical records made her a genuine asset to our therapy program. She communicated with families with compassion and professionalism.
+          </p>
+          <div class="testi-author">
+            <div class="testi-name">Clinical Supervisor</div>
+            <div class="testi-role">Saint Luke Neurodevelopmental Therapy Center</div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <p class="testi-quote">
+            As Head of Events, Ade delivered every single time. Every event was on schedule, within budget, and the feedback from attendees was consistently outstanding. She leads with both calm and conviction.
+          </p>
+          <div class="testi-author">
+            <div class="testi-name">Faculty Advisor</div>
+            <div class="testi-role">Eureka Society · Taguig City University</div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="testi-placeholder-note">
+        ✦ These are illustrative placeholders — request written testimonials from your supervisors and replace with their exact quotes before publishing.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container reveal">
+      <div class="eyebrow">Contact</div>
+      <h2 class="section-title" style="color:#fff;">Let's work together.</h2>
+      <p class="section-subtitle">Available for HR, administrative, and operations roles — remote, hybrid, or on-site in Metro Manila.</p>
+
+      <div class="contact-grid">
+        <div class="contact-links">
+          <a href="mailto:m.beaadelinecruz@gmail.com" class="contact-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            m.beaadelinecruz@gmail.com
+          </a>
+          <a href="tel:+639958605892" class="contact-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 6.06 6.06l1.27-.85a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +63 995-8605-892
+          </a>
+          <a href="https://linkedin.com/in/beaadelinecruz" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            linkedin.com/in/beaadelinecruz
+          </a>
+          <a href="#" class="contact-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Taguig City, Philippines
+          </a>
+        </div>
+
+        <div class="contact-right">
+          <div class="contact-availability">
+            <div class="avail-label">Currently Available For</div>
+            <div class="avail-tags">
+              <span class="avail-tag">Full-time</span>
+              <span class="avail-tag">Remote</span>
+              <span class="avail-tag">Hybrid</span>
+              <span class="avail-tag">On-site (Metro Manila)</span>
+            </div>
+          </div>
+          <a href="mailto:m.beaadelinecruz@gmail.com" class="contact-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Send Me a Message
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Adeline Cruz · Taguig City, Philippines · Built with care.</p>
+  </footer>
+
+  <script>
+    // Mobile menu
+    function toggleMenu(btn) {
+      var menu = document.getElementById('mobile-menu');
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    }
+
+    function closeMenu() {
+      document.getElementById('mobile-menu').classList.remove('open');
+      var btn = document.querySelector('.nav-toggle');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    }
+
+    // Scroll reveal
+    var reveals = document.querySelectorAll('.reveal');
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      reveals.forEach(function(el) { observer.observe(el); });
+    } else {
+      reveals.forEach(function(el) { el.classList.add('visible'); });
+    }
+
+    // Nav active state on scroll
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', function() {
+      var scrollY = window.scrollY;
+      sections.forEach(function(sec) {
+        var top = sec.offsetTop - 80;
+        var bottom = top + sec.offsetHeight;
+        if (scrollY >= top && scrollY < bottom) {
+          navLinks.forEach(function(a) {
+            a.style.color = a.getAttribute('href') === '#' + sec.id ? 'var(--green)' : '';
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
