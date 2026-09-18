@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adeline Cruz — HR &amp; Operations Professional</title>
+<meta name="description" content="Certified Human Resource Associate and BS Psychology Cum Laude graduate. Specializing in recruitment coordination, HR administration, and operations support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf7f2;
+    --ink:#1f2320;
+    --moss:#3f5b46;
+    --moss-dark:#2c4132;
+    --clay:#b3714f;
+    --line:#e4ddd0;
+    --muted:#6b6a63;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+  }
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-0.01em;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  section{padding:96px 0;}
+  .section-inner{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  /* Nav */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,247,242,0.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
+  .logo{font-family:'Fraunces',serif;font-size:1.15rem;}
+  .navlinks{display:flex;gap:32px;font-size:0.92rem;color:var(--muted);}
+  .navlinks a:hover{color:var(--ink);}
+  .btn{
+    display:inline-block;padding:10px 20px;border-radius:100px;
+    font-size:0.9rem;font-weight:600;
+  }
+  .btn-primary{background:var(--moss);color:#fff;}
+  .btn-primary:hover{background:var(--moss-dark);}
+  .btn-outline{border:1px solid var(--ink);}
+
+  /* Hero */
+  .hero{padding:88px 0 40px;}
+  .eyebrow{
+    display:inline-block;font-size:0.85rem;color:var(--moss);
+    background:#eaf0e9;padding:6px 14px;border-radius:100px;margin-bottom:28px;
+  }
+  .hero h1{font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.08;max-width:16ch;}
+  .hero h1 em{font-style:italic;color:var(--clay);}
+  .hero p.lede{max-width:52ch;color:var(--muted);font-size:1.1rem;margin:24px 0 36px;}
+  .hero-actions{display:flex;gap:16px;margin-bottom:56px;}
+  .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;}
+  .hero-photo{
+    width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;
+    border:1px solid var(--line);
+  }
+  .stat-row{
+    display:flex;flex-wrap:wrap;gap:12px;margin-top:64px;
+    border-top:1px solid var(--line);padding-top:32px;
+  }
+  .stat-chip{
+    font-size:0.85rem;padding:8px 16px;border:1px solid var(--line);
+    border-radius:100px;color:var(--muted);
+  }
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;}
+  .kicker{font-size:0.85rem;color:var(--clay);margin-bottom:10px;}
+  .about-grid h2{font-size:2rem;margin-bottom:20px;max-width:14ch;}
+  .about-grid p{color:var(--muted);margin-bottom:16px;max-width:56ch;}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:20px 32px;margin-top:8px;}
+  .fact-label{font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em;}
+  .fact-value{font-size:1rem;font-weight:600;margin-top:2px;}
+  .mission{
+    margin-top:36px;padding:24px;background:#fff;border:1px solid var(--line);
+    border-radius:12px;font-style:italic;color:var(--ink);
+  }
+
+  /* Experience */
+  .exp-item{
+    display:grid;grid-template-columns:200px 1fr;gap:32px;
+    padding:32px 0;border-top:1px solid var(--line);
+  }
+  .exp-item:last-child{border-bottom:1px solid var(--line);}
+  .exp-meta .org{font-weight:600;font-size:0.95rem;}
+  .exp-meta .date{color:var(--muted);font-size:0.88rem;margin-top:4px;}
+  .exp-body h3{font-size:1.15rem;margin-bottom:10px;}
+  .exp-body p{color:var(--muted);font-size:0.96rem;max-width:64ch;}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+  .tag{
+    font-size:0.78rem;background:#eaf0e9;color:var(--moss-dark);
+    padding:5px 12px;border-radius:100px;
+  }
+  .current-tag{
+    display:inline-block;font-size:0.72rem;font-weight:600;color:var(--clay);
+    border:1px solid var(--clay);padding:3px 10px;border-radius:100px;margin-left:10px;
+    vertical-align:middle;
+  }
+
+  /* Skills */
+  .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px;}
+  .skill-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px;}
+  .skill-card h3{font-size:1rem;font-family:'Inter',sans-serif;font-weight:600;margin-bottom:16px;}
+  .skill-card ul{list-style:none;color:var(--muted);font-size:0.92rem;}
+  .skill-card li{padding:6px 0;border-top:1px solid var(--line);}
+  .skill-card li:first-child{border-top:none;}
+
+  /* Education */
+  .edu-list{margin-top:40px;}
+  .edu-item{padding:24px 0;border-top:1px solid var(--line);}
+  .edu-item:last-child{border-bottom:1px solid var(--line);}
+  .edu-item .org{font-weight:600;}
+  .edu-item .meta{color:var(--muted);font-size:0.9rem;margin-top:4px;}
+  .edu-item .course{font-size:0.88rem;color:var(--muted);margin-top:10px;}
+
+  /* Testimonials */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+  .testi-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px;font-size:0.94rem;}
+  .testi-card p{color:var(--ink);margin-bottom:20px;}
+  .testi-who{font-size:0.85rem;color:var(--muted);}
+  .testi-note{margin-top:24px;font-size:0.82rem;color:var(--muted);font-style:italic;}
+
+  /* Contact */
+  .contact{background:var(--moss-dark);color:#fff;border-radius:20px;padding:64px 48px;text-align:center;}
+  .contact h2{color:#fff;font-size:2rem;}
+  .contact p{color:#d7ded4;max-width:44ch;margin:16px auto 32px;}
+  .contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-bottom:32px;font-size:0.94rem;}
+  .avail-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:32px;}
+  .avail-chip{font-size:0.82rem;border:1px solid rgba(255,255,255,0.3);padding:6px 14px;border-radius:100px;}
+  .contact .btn-primary{background:#fff;color:var(--moss-dark);}
+  .contact .btn-primary:hover{background:#eee;}
+
+  footer{padding:32px 0;text-align:center;color:var(--muted);font-size:0.85rem;}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;gap:32px;}
+    .exp-item{grid-template-columns:1fr;gap:8px;}
+    .skills-grid{grid-template-columns:1fr;}
+    .testi-grid{grid-template-columns:1fr;}
+    .navlinks{display:none;}
+    .contact{padding:48px 24px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#hero" class="logo">Adeline Cruz</a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="mailto:m.beaadelinecruz@gmail.com" class="btn btn-outline">Get in Touch</a>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <div class="wrap">
+    <span class="eyebrow">Open to HR &amp; Operations Roles</span>
+    <div class="hero-grid">
+      <div>
+        <h1>Where precision meets <em>people skills.</em></h1>
+        <p class="lede">Certified Human Resource Associate &amp; BS Psychology Cum Laude graduate. Experienced in recruitment coordination, HR administration, and cross-sector operations support.</p>
+        <div class="hero-actions">
+          <a href="#experience" class="btn btn-primary">View My Work</a>
+          <a href="mailto:m.beaadelinecruz@gmail.com" class="btn btn-outline">Say Hello</a>
+        </div>
+      </div>
+      <img src="photo.png" alt="Adeline Cruz" class="hero-photo">
+    </div>
+    <div class="stat-row">
+      <span class="stat-chip">100% Documentation Accuracy</span>
+      <span class="stat-chip">30% Faster Record Retrieval</span>
+      <span class="stat-chip">95% Applicant Response Rate</span>
+      <span class="stat-chip">Full Statutory Compliance</span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-inner about-grid">
+    <div>
+      <div class="kicker">About Me</div>
+      <h2>Precision &amp; people, in equal measure.</h2>
+      <p>I'm Ade — a Certified Human Resource Associate and psychology graduate who believes administrative work is most powerful when it's grounded in how people actually operate.</p>
+      <p>I've spent the past two years building experience across HR, coaching operations, and clinical/education settings — from statutory compliance and recruitment pipelines to client scheduling and inbox management. Every setting demanded the same things from me — accuracy, reliability, and genuine presence — and I delivered in all of them.</p>
+      <p>My background in organizational and industrial psychology means I don't just manage processes. I understand the people inside them.</p>
+    </div>
+    <div>
+      <div class="facts">
+        <div><div class="fact-label">Based in</div><div class="fact-value">Taguig City, PH</div></div>
+        <div><div class="fact-label">Degree</div><div class="fact-value">BS Psychology, Cum Laude</div></div>
+        <div><div class="fact-label">Certified</div><div class="fact-value">HREAP Batch 71, 2026</div></div>
+        <div><div class="fact-label">Dean's List</div><div class="fact-value">7 consecutive sems</div></div>
+        <div><div class="fact-label">Currently</div><div class="fact-value">HR &amp; Admin Assistant, Net Pacific</div></div>
+        <div><div class="fact-label">Available</div><div class="fact-value">Full-time · Remote · Hybrid</div></div>
+      </div>
+      <div class="mission">To bring precision, empathy, and genuine human understanding to every organization I support.</div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-inner">
+    <div class="kicker">Work Experience</div>
+    <h2>Where I've made an impact.</h2>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="org">Net Pacific, Inc.</div>
+        <div class="date">June 2026 – Present <span class="current-tag">Current</span></div>
+      </div>
+      <div class="exp-body">
+        <h3>HR &amp; Administrative Assistant</h3>
+        <p>Administered end-to-end statutory compliance across SSS, PhilHealth, Pag-IBIG, and DOLE, managing employee registration, benefit claims, and separation reporting with full regulatory accuracy. Managed employee benefits including life insurance enrollment, coordinating with providers to maintain accurate records. Oversaw leave and timekeeping administration, reconciling attendance and leave balances with payroll to ensure error-free, compliant compensation processing.</p>
+        <div class="tags">
+          <span class="tag">Full regulatory compliance</span>
+          <span class="tag">Error-free payroll reconciliation</span>
+          <span class="tag">Benefits administration</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="org">Performance Evolution Coaching</div>
+        <div class="date">May 2024 – Present <span class="current-tag">Current</span></div>
+      </div>
+      <div class="exp-body">
+        <h3>Client Scheduling Assistant</h3>
+        <p>Managed client scheduling and appointment coordination, ensuring accurate bookings, confirmations, and timely follow-ups. Handled client communications regarding availability, rescheduling, and appointment confirmations while maintaining a professional and friendly experience.</p>
+        <div class="tags">
+          <span class="tag">Accurate booking coordination</span>
+          <span class="tag">Professional client communication</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="org">Built Transformation</div>
+        <div class="date">May 2024 – May 2026</div>
+      </div>
+      <div class="exp-body">
+        <h3>Email &amp; Administrative Assistant</h3>
+        <p>Managed and organized email correspondence, ensuring messages were accurately categorized, prioritized, and addressed in a timely manner. Monitored inbox activity, identified important communications, and maintained follow-up tracking to ensure tasks were completed efficiently.</p>
+        <div class="tags">
+          <span class="tag">Organized inbox management</span>
+          <span class="tag">Consistent follow-up tracking</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="org">Suyen Corporation</div>
+        <div class="date">November 2025</div>
+      </div>
+      <div class="exp-body">
+        <h3>HR &amp; Administrative Assistant Intern</h3>
+        <p>Managed end-to-end recruitment pipelines — from applicant screening and examination administration through interview scheduling and documentation — with zero scheduling conflicts across all open roles. Systematized 50+ applicant records into a structured filing system, cutting retrieval time by 30% during HR audits. Maintained multi-channel applicant communication via email, SMS, phone, JobStreet, and LinkedIn, sustaining a 95% response rate.</p>
+        <div class="tags">
+          <span class="tag">100% documentation accuracy</span>
+          <span class="tag">30% faster retrieval</span>
+          <span class="tag">95% response rate</span>
+          <span class="tag">Zero scheduling conflicts</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="org">Enlisted Men's Signal Village Elementary School</div>
+        <div class="date">September – October 2025</div>
+      </div>
+      <div class="exp-body">
+        <h3>Special Education Teacher Intern</h3>
+        <p>Delivered structured classroom sessions and therapeutic activities for 25+ students with diverse learning needs, with measurable focus on communication skills and behavioral regulation. Maintained detailed, data-driven progress documentation that fed directly into program evaluation and individualized student planning.</p>
+        <div class="tags">
+          <span class="tag">25+ individual student plans</span>
+          <span class="tag">Cross-functional collaboration</span>
+          <span class="tag">Data-driven tracking</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="org">Saint Luke Neurodevelopmental Therapy Center</div>
+        <div class="date">August – September 2025</div>
+      </div>
+      <div class="exp-body">
+        <h3>Behavioral Therapist Intern</h3>
+        <p>Applied evidence-based behavioral intervention strategies in structured one-on-one and small-group sessions. Maintained clinical records with zero documentation errors, ensuring accurate data for ongoing treatment planning and progress monitoring.</p>
+        <div class="tags">
+          <span class="tag">Zero clinical documentation errors</span>
+          <span class="tag">Interdisciplinary team coordination</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="org">Eureka Society · Taguig City University</div>
+        <div class="date">2024 – 2025</div>
+      </div>
+      <div class="exp-body">
+        <h3>Head of Events Committee</h3>
+        <p>Directed comprehensive planning and execution of five high-impact academic and social events, each attended by 200+ people, with zero scheduling conflicts throughout the year. Led a cross-functional committee of 12 student leaders — delegating responsibilities, managing timelines, and coordinating logistics with faculty and external vendors.</p>
+        <div class="tags">
+          <span class="tag">200+ attendees per event</span>
+          <span class="tag">12-person committee lead</span>
+          <span class="tag">95%+ positive feedback</span>
+          <span class="tag">Zero conflicts</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="org">Psychology Society · Taguig City University</div>
+        <div class="date">2024 – 2026</div>
+      </div>
+      <div class="exp-body">
+        <h3>Event Committee Member</h3>
+        <p>Designed and implemented programming that increased organizational membership by 40%, coordinating 8+ initiatives focused on peer learning and community development.</p>
+        <div class="tags">
+          <span class="tag">40% membership growth</span>
+          <span class="tag">8+ programs coordinated</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-inner">
+    <div class="kicker">Core Competencies</div>
+    <h2>What I bring to every role.</h2>
+    <p style="color:var(--muted);max-width:60ch;margin-top:12px;">A blend of operational discipline, people-centered psychology training, and a full modern tech stack.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Operational</h3>
+        <ul>
+          <li>Recruitment Coordination</li>
+          <li>End-to-End Applicant Pipeline</li>
+          <li>Statutory &amp; Benefits Administration</li>
+          <li>HR Data Management</li>
+          <li>Documentation &amp; Filing Systems</li>
+          <li>Calendar &amp; Schedule Management</li>
+          <li>Multi-channel Communication</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>People &amp; Behavioral</h3>
+        <ul>
+          <li>Behavioral Observation &amp; Assessment</li>
+          <li>Stakeholder Engagement</li>
+          <li>Cross-functional Collaboration</li>
+          <li>Professional Communication</li>
+          <li>Organizational Psychology</li>
+          <li>Event &amp; Program Coordination</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Technical</h3>
+        <ul>
+          <li>Google Workspace (full suite)</li>
+          <li>Microsoft 365 (full suite) &amp; Outlook</li>
+          <li>ATS: JobStreet, LinkedIn &amp; Indeed</li>
+          <li>Canva &amp; Canva AI</li>
+          <li>AI Tools: ChatGPT, Claude, Gemini, Grammarly</li>
+          <li>Zoom · Google Meet</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="section-inner">
+    <div class="kicker">Education &amp; Certifications</div>
+    <h2>The foundation behind the work.</h2>
+    <div class="edu-list">
+      <div class="edu-item">
+        <div class="org">Taguig City University</div>
+        <div class="meta">BS Psychology · Class of 2026 · Cum Laude · Dean's Lister, 7 semesters</div>
+        <div class="course"><strong>Relevant Coursework:</strong> Organizational &amp; Industrial Psychology · Research Methods · Business Communication · Human Development</div>
+      </div>
+      <div class="edu-item">
+        <div class="org">Certified Human Resource Associate</div>
+        <div class="meta">Human Resource Educators Association of the Philippines (HREAP) · Batch 71 · May 2026</div>
+      </div>
+      <div class="edu-item">
+        <div class="org">Research Poster Presentation Certificate</div>
+        <div class="meta">11th Annual Research Congress · Taguig City University · April 2026</div>
+      </div>
+      <div class="edu-item">
+        <div class="org">39th PAPJA Annual Convention Participant</div>
+        <div class="meta">Psychological Association of the Philippines · April 2026</div>
+      </div>
+      <div class="edu-item">
+        <div class="org">Understanding Behavior: Foundational Seminar for Interns</div>
+        <div class="meta">River of Life Childcare and Learning Center · September 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="section-inner">
+    <div class="kicker">Testimonials</div>
+    <h2>What people say about working with me.</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p>"Ade demonstrated exceptional reliability throughout her internship — her documentation was always accurate, her communication with candidates was professional, and she needed minimal supervision to manage a high volume of applicants."</p>
+        <div class="testi-who">HR Supervisor, Suyen Corporation</div>
+      </div>
+      <div class="testi-card">
+        <p>"Her ability to collaborate with our full care team while maintaining precise clinical records made her a genuine asset to our therapy program. She communicated with families with compassion and professionalism."</p>
+        <div class="testi-who">Clinical Supervisor, Saint Luke Neurodevelopmental Therapy Center</div>
+      </div>
+      <div class="testi-card">
+        <p>"As Head of Events, Ade delivered every single time. Every event was on schedule, within budget, and the feedback from attendees was consistently outstanding. She leads with both calm and conviction."</p>
+        <div class="testi-who">Faculty Advisor, Eureka Society · Taguig City University</div>
+      </div>
+    </div>
+    <div class="testi-note">✦ These are illustrative placeholders — request written testimonials from your supervisors and replace with their exact quotes before publishing.</div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact">
+      <h2>Let's work together.</h2>
+      <p>Available for HR, administrative, and operations roles — remote or hybrid.</p>
+      <div class="contact-links">
+        <a href="mailto:m.beaadelinecruz@gmail.com">m.beaadelinecruz@gmail.com</a>
+        <a href="tel:+639958605892">+63 995-8605-892</a>
+        <a href="https://linkedin.com/in/beaadelinecruz" target="_blank" rel="noopener">linkedin.com/in/beaadelinecruz</a>
+        <span>Taguig City, Philippines</span>
+      </div>
+      <div class="avail-row">
+        <span class="avail-chip">Full-time</span>
+        <span class="avail-chip">Remote</span>
+        <span class="avail-chip">Hybrid</span>
+      </div>
+      <a href="mailto:m.beaadelinecruz@gmail.com" class="btn btn-primary">Send Me a Message</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Adeline Cruz · Taguig City, Philippines · Built with care.
+</footer>
+
+</body>
+</html>
